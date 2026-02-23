@@ -1,22 +1,22 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: foo
+  name: bar
   labels:
-    app: foo
+    app: bar
 spec:
   replicas: {{ .Values.replicaCount }}
   selector:
     matchLabels:
-      app: foo
+      app: bar
   template:
     metadata:
       labels:
-        app: foo
+        app: bar
     spec:
-      serviceAccountName: foo
+      serviceAccountName: bar
       containers:
-        - name: foo
+        - name: bar
           image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
           ports:
             - name: http
