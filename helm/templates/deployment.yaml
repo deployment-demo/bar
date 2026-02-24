@@ -13,6 +13,7 @@ spec:
     metadata:
       labels:
         app: bar
+        test: one
     spec:
       serviceAccountName: bar
       containers:
